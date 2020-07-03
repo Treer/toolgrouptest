@@ -13,6 +13,21 @@ minetest.register_tool("toolgrouptest:pick_lucky", {
 	groups = {pickaxe = 1, lucky = 1}
 })
 
+minetest.register_tool("toolgrouptest:pick_mundane", {
+	description = "Mundane Pickaxe (not lucky)",
+	inventory_image = "default_tool_diamondpick.png",
+	tool_capabilities = {
+		full_punch_interval = 0.9,
+		max_drop_level=3,
+		groupcaps={
+			cracky = {times={[1]=2.0, [2]=1.0, [3]=0.50}, uses=30, maxlevel=3},
+		},
+		damage_groups = {fleshy=5},
+	},
+	sound = {breaks = "default_tool_breaks"},
+	groups = {pickaxe = 1, lucky = 0}
+})
+
 minetest.register_tool("toolgrouptest:magic_wand", {
 	description = "Magic wand",
 	inventory_image = "default_stick.png^[multiply:#FF80A0^[transformR90",
