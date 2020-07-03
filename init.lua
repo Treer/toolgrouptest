@@ -53,6 +53,7 @@ minetest.register_tool("toolgrouptest:shovel_lucky", {
 		max_drop_level=1,
 		groupcaps={
 			crumbly = {times={[1]=1.10, [2]=0.50, [3]=0.30}, uses=30, maxlevel=3},
+			cracky  = {times={[3]=1.60}, uses=10, maxlevel=1},
 		},
 		damage_groups = {fleshy=4},
 	},
